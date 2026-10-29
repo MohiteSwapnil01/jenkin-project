@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage ('pull') {
             steps {
-				git branch: 'main',
-		        git 'https://github.com/MohiteSwapnil01/jenkin-project.git'
+				
+		        git url: 'https://github.com/MohiteSwapnil01/jenkin-project.git',
+                branch: 'main'
                 echo "Pull Success"
             }
             
