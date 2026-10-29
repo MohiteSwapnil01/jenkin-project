@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage ('pull') {
+            steps {
+		git 'https://github.com/MohiteSwapnil01/jenkin-project.git'
+                echo "Pull Success"
+            }
+            
+        }
+        stage ('Build') {
+            steps {
+                echo "Build Success"
+            }
+        }
+    }
+}
