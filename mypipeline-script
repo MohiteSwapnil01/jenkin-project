@@ -12,7 +12,8 @@ pipeline {
         }
         stage ('Build') {
             steps {
-                echo "Build Success"
+                cd backend
+                mvn clean package -DskipTests
             }
         }
     }
